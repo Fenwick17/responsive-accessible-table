@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+			<h1 class="heading-xlarge">Transaction table</h1>
+			
+			<table>
+        <caption class="heading-small">Your transactions</caption>
+        <thead>
+          <tr>
+            <th scope="col">Date</th>
+            <th class="numeric" scope="col">Method of payment</th>
+            <th class="numeric" scope="col">Amount of payment</th>
+            <th class="numeric" scope="col">Left to pay</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1 January 2017</th>
+            <td class="numeric">Paid by credit card</td>
+            <td class="numeric">£1053.37</td>
+            <td class="numeric">£803.37</td>
+          </tr>
+          <tr>
+            <th scope="row">2 February 2017</th>
+            <td class="numeric">Paid by cheque</td>
+            <td class="numeric">£100.00</td>
+            <td class="numeric">£703.38</td>
+          </tr>
+          <tr>
+            <th scope="row">3 March 2017</th>
+            <td class="numeric">Paid by debit card</td>
+            <td class="numeric">£100.00</td>
+            <td class="numeric">£603.38</td>
+          </tr>
+          <tr>
+            <th scope="row">4 April 2017</th>
+            <td class="numeric">Paid by credit card</td>
+            <td class="numeric">£500.00</td>
+            <td class="numeric">£103.38</td>
+          </tr>
+          <tr>
+            <th scope="row">5 May 2017</th>
+            <td class="numeric">Paid by credit card</td>
+            <td class="numeric">103.38</td>
+            <td class="numeric">£0</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
+
+

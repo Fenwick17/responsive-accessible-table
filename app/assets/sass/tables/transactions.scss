@@ -2,7 +2,6 @@ $mobile: 768px;
 
 .responsive-table {
   width: 100%;
-  margin-bottom: 1.5em;
 
   thead {
     position: absolute;
@@ -22,14 +21,12 @@ $mobile: 768px;
       overflow: auto;
     }
   }
+
   tbody,
   tr,
   th,
   td {
     display: block;
-    padding: 0;
-    text-align: left;
-    white-space: normal;
   }
   
   tr {   
@@ -40,12 +37,10 @@ $mobile: 768px;
   
   th,
   td {
-    padding: .5em;
     vertical-align: middle;
     
     @media (min-width: $mobile) {
       display: table-cell;
-      padding: .5em;
     }
   }
   
@@ -64,11 +59,6 @@ $mobile: 768px;
       
       @media (min-width: $mobile) {
         display: table-row;
-        border-width: 1px;
-      }
-      
-      &:last-of-type {
-        margin-bottom: 0; 
       }
     }
     
@@ -81,6 +71,10 @@ $mobile: 768px;
     
     td {
       text-align: right;
+
+      &:last-child {
+        padding-right: 1em;
+      }
       
       @media (min-width: $mobile) {
         text-align: left; 
@@ -100,5 +94,16 @@ $mobile: 768px;
         content: none; 
       }
     } 
+  }
+
+  .blankfield {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px; 
+    width: 1px; 
+    overflow: hidden;
   }
 }

@@ -1,0 +1,128 @@
+$desktop: 1024px;
+$mobile: 768px;
+
+// Styles
+* {
+ @include box-sizing(border-box);
+ 
+ &:before,
+ &:after {
+   @include box-sizing(border-box);
+ }
+}
+
+
+.responsive-table {
+  width: 100%;
+  margin-bottom: 1.5em;
+
+  thead {
+    // Accessibly hide <thead> on narrow viewports
+    position: absolute;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px; 
+    width: 1px; 
+    overflow: hidden;
+    
+    @media (min-width: $mobile) {
+      // Unhide <thead> on wide viewports
+      position: relative;
+      clip: auto;
+      height: auto;
+      width: auto;
+      overflow: auto;
+    }
+  }
+  
+  // Set these items to display: block for narrow viewports
+  tbody,
+  tr,
+  th,
+  td {
+    display: block;
+    padding: 0;
+    text-align: left;
+    white-space: normal;
+  }
+  
+  tr {   
+    @media (min-width: $mobile) {
+      // Undo display: block 
+      display: table-row; 
+    }
+  }
+  
+  th,
+  td {
+    padding: .5em;
+    vertical-align: middle;
+    
+    @media (min-width: $mobile) {
+      // Undo display: block 
+      display: table-cell;
+      padding: .5em;
+    }
+  }
+  
+  tfoot {
+    font-size: .8em;
+    font-style: italic;
+  }
+  
+  tbody {
+    @media (min-width: $mobile) {
+      // Undo display: block 
+      display: table-row-group; 
+    }
+    
+    tr {
+      margin-bottom: 1em;
+      
+      @media (min-width: $mobile) {
+        // Undo display: block 
+        display: table-row;
+        border-width: 1px;
+      }
+      
+      &:last-of-type {
+        margin-bottom: 0; 
+      }
+    }
+    
+    th[scope="row"] {
+      color: white;
+      
+      @media (min-width: $mobile) {
+        background-color: transparent;
+        color: rgba(94,93,82,1);
+        text-align: left;
+      }
+    }
+    
+    td {
+      text-align: right;
+      
+      @media (min-width: $mobile) {
+        text-align: left; 
+
+        &.numeric {
+          text-align: right;
+        }
+      }
+    }
+    
+    td[data-title]:before {
+      content: attr(data-title);
+      float: left;
+      font-weight: 700;
+      
+      @media (min-width: $mobile) {
+        // Don’t show data-title labels 
+        content: none; 
+      }
+    } 
+  }
+}

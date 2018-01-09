@@ -1,23 +1,10 @@
-$desktop: 1024px;
 $mobile: 768px;
-
-// Styles
-* {
- @include box-sizing(border-box);
- 
- &:before,
- &:after {
-   @include box-sizing(border-box);
- }
-}
-
 
 .responsive-table {
   width: 100%;
   margin-bottom: 1.5em;
 
   thead {
-    // Accessibly hide <thead> on narrow viewports
     position: absolute;
     clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
     clip: rect(1px, 1px, 1px, 1px);
@@ -28,7 +15,6 @@ $mobile: 768px;
     overflow: hidden;
     
     @media (min-width: $mobile) {
-      // Unhide <thead> on wide viewports
       position: relative;
       clip: auto;
       height: auto;
@@ -36,8 +22,6 @@ $mobile: 768px;
       overflow: auto;
     }
   }
-  
-  // Set these items to display: block for narrow viewports
   tbody,
   tr,
   th,
@@ -50,7 +34,6 @@ $mobile: 768px;
   
   tr {   
     @media (min-width: $mobile) {
-      // Undo display: block 
       display: table-row; 
     }
   }
@@ -61,7 +44,6 @@ $mobile: 768px;
     vertical-align: middle;
     
     @media (min-width: $mobile) {
-      // Undo display: block 
       display: table-cell;
       padding: .5em;
     }
@@ -73,8 +55,7 @@ $mobile: 768px;
   }
   
   tbody {
-    @media (min-width: $mobile) {
-      // Undo display: block 
+    @media (min-width: $mobile) { 
       display: table-row-group; 
     }
     
@@ -82,7 +63,6 @@ $mobile: 768px;
       margin-bottom: 1em;
       
       @media (min-width: $mobile) {
-        // Undo display: block 
         display: table-row;
         border-width: 1px;
       }
@@ -93,11 +73,8 @@ $mobile: 768px;
     }
     
     th[scope="row"] {
-      color: white;
       
       @media (min-width: $mobile) {
-        background-color: transparent;
-        color: rgba(94,93,82,1);
         text-align: left;
       }
     }
@@ -120,7 +97,6 @@ $mobile: 768px;
       font-weight: 700;
       
       @media (min-width: $mobile) {
-        // Don’t show data-title labels 
         content: none; 
       }
     } 

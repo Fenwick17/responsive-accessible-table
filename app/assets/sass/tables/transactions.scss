@@ -7,6 +7,7 @@ $mobile: 768px;
     position: absolute;
     clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
     clip: rect(1px, 1px, 1px, 1px);
+    display: none;
     padding: 0;
     border: 0;
     height: 1px; 
@@ -14,6 +15,7 @@ $mobile: 768px;
     overflow: hidden;
     
     @media (min-width: $mobile) {
+      display: table-header-group;
       position: relative;
       clip: auto;
       height: auto;

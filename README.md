@@ -6,4 +6,9 @@ Prototype application to create accessible and responsive tables.
 `yarn install` or `npm install`  
 `yarn start` or `npm start`
 
- 
+| Screen reader | Tested  | 
+| ------------- | :------:|
+| VoiceOver     | &#10004;|
+| JAWS          |         |
+| NVDA          |         |
+| Android       |         |

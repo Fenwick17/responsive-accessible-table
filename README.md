@@ -1,4 +1,4 @@
-# Accesible and Responsive tables
+# Accessible and Responsive tables
 
 Prototype application to create accessible and responsive tables.
 

@@ -4,23 +4,23 @@ $mobile: 768px;
   width: 100%;
 
   thead {
-    position: absolute;
-    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    border: 0;
+    clip: rect(1px 1px 1px 1px); // IE6, IE7
     clip: rect(1px, 1px, 1px, 1px);
     display: none;
-    padding: 0;
-    border: 0;
-    height: 1px; 
-    width: 1px; 
+    height: 1px;
     overflow: hidden;
-    
+    padding: 0;
+    position: absolute;
+    width: 1px;
+
     @media (min-width: $mobile) {
-      display: table-header-group;
-      position: relative;
       clip: auto;
+      display: table-header-group;
       height: auto;
-      width: auto;
       overflow: auto;
+      position: relative;
+      width: auto;
     }
   }
 
@@ -30,82 +30,90 @@ $mobile: 768px;
   td {
     display: block;
   }
-  
-  tr {   
+
+  tr {
     @media (min-width: $mobile) {
-      display: table-row; 
+      display: table-row;
     }
   }
-  
+
   th,
   td {
     vertical-align: middle;
-    
+
     @media (min-width: $mobile) {
       display: table-cell;
     }
   }
-  
-  tfoot {
-    font-size: .8em;
-    font-style: italic;
-  }
-  
+
   tbody {
-    @media (min-width: $mobile) { 
-      display: table-row-group; 
+    @media (min-width: $mobile) {
+      display: table-row-group;
     }
-    
-    tr {
-      margin-bottom: 1em;
-      
-      @media (min-width: $mobile) {
-        display: table-row;
-      }
-    }
-    
-    th[scope="row"] {
-      
+
+    th {
+      text-align: right;
+
       @media (min-width: $mobile) {
         text-align: left;
       }
     }
-    
+
+    tr {
+      margin-bottom: 1em;
+
+      @media (min-width: $mobile) {
+        display: table-row;
+      }
+    }
+
+    th[scope="row"] {
+
+      @media (min-width: $mobile) {
+        text-align: left;
+      }
+    }
+
     td {
       text-align: right;
 
       &:last-child {
         padding-right: 1em;
+
+        @media (min-width: $mobile) {
+          padding-right: 0;
+        }
       }
-      
+
       @media (min-width: $mobile) {
-        text-align: left; 
+        text-align: left;
 
         &.numeric {
           text-align: right;
         }
       }
     }
-    
-    td[data-title]:before {
+
+    th[data-title]::before,
+    td[data-title]::before {
       content: attr(data-title);
       float: left;
       font-weight: 700;
-      
+
       @media (min-width: $mobile) {
-        content: none; 
+        content: none;
       }
-    } 
+    }
   }
 
   .blankfield {
-    position: absolute;
-    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-    clip: rect(1px, 1px, 1px, 1px);
-    padding: 0;
     border: 0;
-    height: 1px; 
-    width: 1px; 
+    clip: rect(1px 1px 1px 1px); // IE6, IE7
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
     overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
   }
 }

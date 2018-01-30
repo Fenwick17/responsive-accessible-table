@@ -51,57 +51,65 @@ $mobile: 768px;
       display: table-row-group;
     }
 
-    th {
-      text-align: right;
-
-      @media (min-width: $mobile) {
-        text-align: left;
-      }
-    }
-
     tr {
       margin-bottom: 1em;
 
       @media (min-width: $mobile) {
         display: table-row;
       }
-    }
 
-    th[scope="row"] {
-
-      @media (min-width: $mobile) {
-        text-align: left;
-      }
-    }
-
-    td {
-      text-align: right;
-
-      &:last-child {
-        padding-right: 1em;
+      th {
+        text-align: right;
 
         @media (min-width: $mobile) {
-          padding-right: 0;
+          text-align: left;
+        }
+
+        &[scope='row'] {
+          @media (min-width: $mobile) {
+            text-align: left;
+          }
+        }
+
+        &[data-title]::before {
+          content: attr(data-title);
+          float: left;
+          font-weight: 700;
+
+          @media (min-width: $mobile) {
+            content: none;
+          }
         }
       }
 
-      @media (min-width: $mobile) {
-        text-align: left;
+      td {
+        text-align: right;
 
-        &.numeric {
-          text-align: right;
+        &:last-child {
+          padding-right: 1em;
+
+          @media (min-width: $mobile) {
+            padding-right: 0;
+          }
         }
-      }
-    }
 
-    th[data-title]::before,
-    td[data-title]::before {
-      content: attr(data-title);
-      float: left;
-      font-weight: 700;
+        @media (min-width: $mobile) {
+          text-align: left;
 
-      @media (min-width: $mobile) {
-        content: none;
+          &.numeric {
+            text-align: right;
+          }
+        }
+
+        &[data-title]::before {
+          content: attr(data-title);
+          float: left;
+          font-weight: 700;
+
+          @media (min-width: $mobile) {
+            content: none;
+          }
+        }
       }
     }
   }

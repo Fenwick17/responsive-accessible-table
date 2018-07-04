@@ -7,7 +7,6 @@ $mobile: 768px;
     border: 0;
     clip: rect(1px 1px 1px 1px); // IE6, IE7
     clip: rect(1px, 1px, 1px, 1px);
-    display: none;
     height: 1px;
     overflow: hidden;
     padding: 0;
@@ -24,31 +23,31 @@ $mobile: 768px;
     }
   }
 
-  tbody,
-  tr,
-  th,
-  td {
-    display: block;
-  }
-
-  tr {
-    @media (min-width: $mobile) {
-      display: table-row;
-    }
-  }
-
-  th,
-  td {
-    vertical-align: middle;
-
-    @media (min-width: $mobile) {
-      display: table-cell;
-    }
-  }
-
   tbody {
     @media (min-width: $mobile) {
       display: table-row-group;
+    }
+
+    tr, th, td {
+      display: block;
+    }
+
+    th, td {
+      vertical-align: middle;
+  
+      @media (min-width: $mobile) {
+        display: table-cell;
+      }
+    }
+
+    .table-heading {
+      float: left;
+      font-weight: 700;
+      text-align: left;
+
+      @media (min-width: $mobile) {
+        display: none;
+      }
     }
 
     tr {
@@ -70,19 +69,10 @@ $mobile: 768px;
             text-align: left;
           }
         }
-
-        &[data-title]::before {
-          content: attr(data-title);
-          float: left;
-          font-weight: 700;
-
-          @media (min-width: $mobile) {
-            content: none;
-          }
-        }
       }
 
       td {
+        min-width: 1px;
         text-align: right;
 
         &:last-child {
@@ -100,28 +90,18 @@ $mobile: 768px;
             text-align: right;
           }
         }
-
-        &[data-title]::before {
-          content: attr(data-title);
-          float: left;
-          font-weight: 700;
-
-          @media (min-width: $mobile) {
-            content: none;
-          }
-        }
       }
     }
   }
 
-  .blankfield {
-    border: 0;
-    clip: rect(1px 1px 1px 1px); // IE6, IE7
-    clip: rect(1px, 1px, 1px, 1px);
-    height: 1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-  }
+  // .blankfield {
+  //   border: 0;
+  //   clip: rect(1px 1px 1px 1px); // IE6, IE7
+  //   clip: rect(1px, 1px, 1px, 1px);
+  //   height: 1px;
+  //   overflow: hidden;
+  //   padding: 0;
+  //   position: absolute;
+  //   width: 1px;
+  // }
 }

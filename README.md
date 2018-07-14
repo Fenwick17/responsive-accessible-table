@@ -9,6 +9,5 @@ Prototype application to create accessible and responsive tables.
 | Screen reader | Tested  | 
 | ------------- | :------:|
 | VoiceOver     | &#10004;|
-| JAWS          |         |
-| NVDA          |         |
-| Android       |         |
+| JAWS          | &#10004;|
+| NVDA          | &#10004;|

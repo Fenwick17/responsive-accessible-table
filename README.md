@@ -1,11 +1,10 @@
 # Accessible and Responsive tables
 
-Prototype application to create accessible and responsive tables.  
-https://responsive-tables.herokuapp.com/tables/transactions
+Prototype application to create accessible and responsive tables.
 
 ## Steps to install
-`yarn install` or `npm install`  
-`yarn start` or `npm start`
+`npm install`  
+`npm start`
 
 | Screen reader | Tested  | 
 | ------------- | :------:|

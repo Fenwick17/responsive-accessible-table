@@ -33,6 +33,8 @@ $mobile: 768px;
     }
 
     th, td {
+      display: flex;
+      justify-content: space-between;
       vertical-align: middle;
   
       @media (min-width: $mobile) {
@@ -40,8 +42,8 @@ $mobile: 768px;
       }
     }
 
+
     .table-heading {
-      float: left;
       font-weight: 700;
       text-align: left;
 
@@ -93,15 +95,4 @@ $mobile: 768px;
       }
     }
   }
-
-  // .blankfield {
-  //   border: 0;
-  //   clip: rect(1px 1px 1px 1px); // IE6, IE7
-  //   clip: rect(1px, 1px, 1px, 1px);
-  //   height: 1px;
-  //   overflow: hidden;
-  //   padding: 0;
-  //   position: absolute;
-  //   width: 1px;
-  // }
 }

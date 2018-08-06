@@ -22,30 +22,6 @@ $mobile: 768px;
     }
   }
 
-  tfoot {
-    th, td { 
-      font-weight: 700;
-    }
-
-    td {
-      text-align: right;
-    }
-
-    @media (max-width: $mobile) {
-      border-bottom: 1px solid #bfc1c3;
-
-      th, tr {
-        display: flex;
-        justify-content: space-between;
-      }
-      
-      th, td {
-        border: 0;
-        font-weight: 700;
-      }
-    }
-  }
-
   tbody {
     @media (min-width: $mobile) {
       display: table-row-group;
@@ -83,6 +59,10 @@ $mobile: 768px;
     tr {
       margin-bottom: 1em;
 
+      &:last-child {
+        margin-bottom: 0;
+      }
+
       @media (min-width: $mobile) {
         display: table-row;
       }
@@ -114,4 +94,12 @@ $mobile: 768px;
       }
     }
   }
+}
+
+.table-foot {
+  border-bottom: 1px solid #bfc1c3;
+  display: flex;
+  font-weight: 700;
+  justify-content: space-between;
+  padding: 1em 0 0.75em;
 }

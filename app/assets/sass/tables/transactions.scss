@@ -5,7 +5,6 @@ $mobile: 768px;
 
   thead {
     border: 0;
-    clip: rect(1px 1px 1px 1px); // IE6, IE7
     clip: rect(1px, 1px, 1px, 1px);
     height: 1px;
     overflow: hidden;
@@ -28,7 +27,7 @@ $mobile: 768px;
       display: table-row-group;
     }
 
-    tr, th, td {
+    tr {
       display: block;
     }
 
@@ -40,12 +39,17 @@ $mobile: 768px;
       @media (min-width: $mobile) {
         display: table-cell;
       }
+
+      @media (max-width: $mobile) {
+        padding-right: 0;
+      }
     }
 
 
     .table-heading {
       font-weight: 700;
       text-align: left;
+      padding-right: 1em;
 
       @media (min-width: $mobile) {
         display: none;
@@ -55,35 +59,24 @@ $mobile: 768px;
     tr {
       margin-bottom: 1em;
 
+      &:last-child {
+        margin-bottom: 0;
+      }
+
       @media (min-width: $mobile) {
         display: table-row;
       }
 
       th {
         text-align: right;
-
         @media (min-width: $mobile) {
           text-align: left;
-        }
-
-        &[scope='row'] {
-          @media (min-width: $mobile) {
-            text-align: left;
-          }
         }
       }
 
       td {
         min-width: 1px;
         text-align: right;
-
-        &:last-child {
-          padding-right: 1em;
-
-          @media (min-width: $mobile) {
-            padding-right: 0;
-          }
-        }
 
         @media (min-width: $mobile) {
           text-align: left;
@@ -94,5 +87,19 @@ $mobile: 768px;
         }
       }
     }
+
+    .total {
+      @media (max-width: $mobile) {
+        display: block;
+      }
+    }
   }
+}
+
+.table-foot {
+  border-bottom: 1px solid #bfc1c3;
+  display: flex;
+  font-weight: 700;
+  justify-content: space-between;
+  padding: 1em 0 0.75em;
 }

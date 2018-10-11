@@ -31,7 +31,7 @@ $mobile: 768px;
       display: block;
     }
 
-    th, td {
+    td {
       display: block; // For browsers that don't support flexbox
       display: flex;
       justify-content: space-between;

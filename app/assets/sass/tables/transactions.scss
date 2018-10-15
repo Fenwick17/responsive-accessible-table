@@ -1,6 +1,5 @@
-$mobile: 768px;
-
 .responsive-table {
+  $mobile: 768px;
   width: 100%;
 
   thead {
@@ -31,11 +30,12 @@ $mobile: 768px;
       display: block;
     }
 
-    th, td {
+    td {
+      display: block; // For browsers that don't support flexbox
       display: flex;
       justify-content: space-between;
       vertical-align: middle;
-  
+
       @media (min-width: $mobile) {
         display: table-cell;
       }
@@ -45,11 +45,11 @@ $mobile: 768px;
       }
     }
 
-
     .table-heading {
       font-weight: 700;
       text-align: left;
       padding-right: 1em;
+      display: block;
 
       @media (min-width: $mobile) {
         display: none;
@@ -69,6 +69,7 @@ $mobile: 768px;
 
       th {
         text-align: right;
+
         @media (min-width: $mobile) {
           text-align: left;
         }
@@ -80,8 +81,12 @@ $mobile: 768px;
 
         @media (min-width: $mobile) {
           text-align: left;
+        }
 
-          &.numeric {
+        &.numeric {
+          text-align: left;
+
+          @media (min-width: $mobile) {
             text-align: right;
           }
         }

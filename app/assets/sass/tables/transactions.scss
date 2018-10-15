@@ -79,13 +79,6 @@
         min-width: 1px;
         text-align: right;
 
-        @at-root {
-
-          .lte-ie8 & {
-            text-align: left;
-          }
-        }
-
         @media (min-width: $mobile) {
           text-align: left;
         }

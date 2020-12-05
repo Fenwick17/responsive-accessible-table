@@ -1,7 +1,7 @@
 # Accessible and Responsive tables
 
 Prototype application to create accessible and responsive tables.  
-https://responsive-tables.herokuapp.com/tables/transactions
+https://fenwick17.github.io/responsive-tables/.
 
 ## Use case
 This is suitable for all tables where row is more important than the column. This should not be used when columns are more important 

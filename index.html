@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive accessible table</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>My favourite movies</h1>
+    <table class="responsive-table" role="table">
+      <caption>Table showing of my favourite movies</caption>
+      <thead role="rowgroup">
+        <tr role="row">
+          <th role="columnheader" scope="col">Title</th>
+          <th role="columnheader" scope="col">Release year</th>
+          <th role="columnheader" scope="col">Genre</th>
+          <th role="columnheader" scope="col">Director</th>
+          <th role="columnheader" scope="col">IMDb rating</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr role="row">
+          <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Title</span>Jurassic Park</td>
+          <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Release year</span>1993</td>
+          <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Genre</span>Action, Adventure, Sci-Fi</td>
+          <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Director</span>Steven Spielberg</td>
+          <td role="cell"><span class="responsive-table__heading" aria-hidden="true">IMDb rating</span>8.1 out of 10</td>
+        </tr>
+        <tr role="row">
+          <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Title</span>Halloween</td>
+          <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Release year</span>1978</td>
+          <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Genre</span>Horror</td>
+          <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Director</span>John Carpenter</td>
+          <td role="cell"><span class="responsive-table__heading" aria-hidden="true">IMDb rating</span>7.8 out of 10</td>
+        </tr>
+        <tr role="row">
+          <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Title</span>Saw</td>
+          <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Release year</span>2004</td>
+          <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Genre</span>Horror</td>
+          <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Director</span>James Wan</td>
+          <td role="cell"><span class="responsive-table__heading" aria-hidden="true">IMDb rating</span>7.6 out of 10</td>
+        </tr>
+        <tr role="row">
+          <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Title</span>The Lord of the Rings: The Two Towers</td>
+          <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Release year</span>2002</td>
+          <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Genre</span>Adventure</td>
+          <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Director</span>Peter Jackson</td>
+          <td role="cell"><span class="responsive-table__heading" aria-hidden="true">IMDb rating</span>8.7 out of 10</td>
+        </tr>
+        <tr role="row">
+          <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Title</span>Anchorman: The Legend of Ron Burgundy</td>
+          <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Release year</span>2004</td>
+          <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Genre</span>Comedy</td>
+          <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Director</span>Adam McKay</td>
+          <td role="cell"><span class="responsive-table__heading" aria-hidden="true">IMDb rating</span>7.2 out of 10</td>
+        </tr>
+        <tr role="row">
+          <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Title</span>Train to Busan</td>
+          <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Release year</span>2016</td>
+          <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Genre</span>Horror</td>
+          <td role="cell"><span class="responsive-table__heading" aria-hidden="true">Director</span>Sang-ho Yeonn</td>
+          <td role="cell"><span class="responsive-table__heading" aria-hidden="true">IMDb rating</span>7.6 out of 10</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

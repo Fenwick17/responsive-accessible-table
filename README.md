@@ -1,7 +1,7 @@
 # Accessible and Responsive tables
 
 Prototype application to create accessible and responsive tables.  
-https://fenwick17.github.io/responsive-tables/.
+https://fenwick17.github.io/responsive-accessible-table/
 
 ## Use case
 This is suitable for all tables where row is more important than the column. This should not be used when columns are more important 

@@ -72,6 +72,9 @@ tbody tr td {
   tbody tr td {
     padding-right: 0;
   }
+  tbody tr td:last-child {
+    border-bottom: 0;
+  }
   tbody tr {
     border-bottom: 3px solid grey;
   }

@@ -20,3 +20,4 @@ The table has been tested by various HMRC members, as well as someone who is vis
 | VoiceOver     | &#10004;|
 | JAWS          | &#10004;|
 | NVDA          | &#10004;|
+| TalkBack      | &#10004;|

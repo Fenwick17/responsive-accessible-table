@@ -11,6 +11,8 @@ On mobile it collapses each table row into its own section. This will appear wit
 Each element has a role assigned to it, which allows the mobile version to keep table behaviour as it would be on desktop when using a screenreader.  
 The table has been tested by various HMRC members, as well as someone who is visually impaired and uses a screenreader daily on a variety of devices.
 
+[Blog post with step by step guidance](https://www.afenwick.com/blog/2021/responsive-accessible-table/)
+
 ## Steps to install
 `npm install`  
 `npm start`

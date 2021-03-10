@@ -55,10 +55,17 @@ tbody tr {
 }
 
 tbody tr td {
+  display: block; /* browsers that don't support flex */
   display: flex;
   justify-content: space-between;
   min-width: 1px;
   text-align: right;
+}
+
+@media all and (-ms-high-contrast: none) { /* IE11 flex fix */
+  tbody tr td {
+    display: block;
+  }
 }
 
 .responsive-table__heading {
